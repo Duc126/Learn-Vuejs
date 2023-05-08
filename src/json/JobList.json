@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "img_job": "@/assets/img/pic1.png",
+    "name_job": "Lập trình viên Front-End",
+    "sum_job": "• Biết sử dụng phần mềm thiết kế Figma, sketch là lợi thế, • Có khả năng lập trình HTML5, CSS3, Javascript, Jquery.",
+    "link_detail_job": "job_detail_1.html",
+    "category": "php"
+  },
+  {
+    "id": 2,
+    "img_job": "@/assets/img/pic2.png",
+    "name_job": "Product Designer",
+    "sum_job": "• Thiết kế giao diện và trải nghiệm người dùng ứng dụng trên nền tảng web, mobile và native app. • Tham gia và phối hợp trong việc phát triển ý tưởng tổng quan và thiết kế cho tính năng sản phẩm mới",
+    "link_detail_job": "job_detail_2.html",
+    "category": "Front-End"
+  },
+  {
+    "id": 3,
+    "img_job": "@/assets/img/pic3.png",
+    "name_job": "PHP Dev 1",
+    "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+    "link_detail_job": "job_detail_3.html",
+    "category": "Designer"
+  },
+  {
+    "id": 4,
+    "img_job": "@/assets/img/pic4.png",
+    "name_job": "PHP Dev",
+    "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+    "link_detail_job": "job_detail_3.html",
+    "category": "Designer"
+  }
+]

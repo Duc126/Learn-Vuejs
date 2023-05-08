@@ -1,0 +1,24 @@
+.job-item{
+  position: relative;
+  width: 270px;
+  background-color: #ffffff;
+  border: 1px solid #DCDCDD;
+  margin: 0 10px 30px;
+  overflow: hidden;
+}
+.job-description {
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  border-bottom: 1px solid #DCDCDD;
+}
+.jobID {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6c757d;
+  padding: 5px;
+}
