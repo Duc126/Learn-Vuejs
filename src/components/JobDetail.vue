@@ -1,14 +1,21 @@
 <template>
-  <div>
-    <h1>Job Detail</h1>
-    <p>ID: {{ job.id }}</p>
-    <p>Job Name: {{ job.name_job }}</p>
-    <p>Job Summary: {{ job.sum_job }}</p>
+  <div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 w-50" style=" height: 250px;">
+        <img :src="require(`@/assets/img/${job.img_job}`)" :alt="job.name_job" width="250" height="200" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h1 hidden class="mb-4">{{ job.id }}</h1>
+
+        <h1 class="mb-4">{{ job.name_job }}</h1>
+        <p class="lead">{{ job.sum_job }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import jobs from '@/json/JobList.json'
+import axios from 'axios'
 
 export default {
   name: 'JobDetail',
@@ -23,8 +30,10 @@ export default {
       job: {}
     }
   },
-  created () {
-    this.job = jobs.find(job => job.id === +this.id)
+  async created () {
+    const response = await axios.get(`http://localhost:3000/job/${this.id}`)
+    console.log(response)
+    this.job = response.data
   }
 }
 </script>
