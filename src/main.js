@@ -4,13 +4,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
 // import JobItem from './components/JobList.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Vue.component('job-item', JobItem)
 
 Vue.config.productionTip = false
 
-// Import thư viện Bootstrap (JS và CSS)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 // Make BootstrapVue available throughout your project
@@ -21,6 +22,7 @@ Vue.use(IconsPlugin)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
