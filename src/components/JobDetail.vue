@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {jobId} from '@/services/JobService.js'
 
 export default {
   name: 'JobDetail',
@@ -31,9 +31,11 @@ export default {
     }
   },
   async created () {
-    const response = await axios.get(`http://localhost:3000/job/${this.id}`)
+    const response = await jobId(this.id)
     console.log(response)
-    this.job = response.data
+    if (response) {
+      this.job = response
+    }
   }
 }
 </script>
