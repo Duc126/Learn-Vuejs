@@ -1,16 +1,24 @@
 <template>
+
   <div id="app">
-    <h1 class="text-center">Job List</h1>
+    <div class="d-flex align-items-center float-end" style="margin-right: 60px;">
+      <div class="ml-auto">
+        <ChangeLanguage />
+      </div>
+    </div>
+      <h1 class="text-center">{{ $t('job-list.list')}}</h1>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import ChangeLanguage from '@/components/Language.vue'
 import JobList from './components/JobList.vue'
 
 export default {
   name: 'App',
   components: {
+    ChangeLanguage,
     JobList
   }
 }

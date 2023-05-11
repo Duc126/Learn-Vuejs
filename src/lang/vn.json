@@ -1,0 +1,25 @@
+{
+  "job-list":{
+    "list": "Danh Sách"
+  },
+  "filter": {
+    "filter": "Danh Sách Việc Làm."
+  },
+  "add": {
+    "job": "Thêm Công Việc Mới"
+  },
+  "message": {
+    "success": "Cập Nhật Thành Công",
+    "add-success": "Thêm data thành công",
+    "delete-success": "Xóa Job Thành Công"
+
+
+  },
+  "detail": {
+    "update-job": "Cập Nhật Job",
+    "description": "Mô Tả",
+    "name": "Tên",
+    "remove-image": "Xóa Ảnh"
+
+  }
+}
