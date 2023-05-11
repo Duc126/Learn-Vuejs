@@ -1,0 +1,22 @@
+{
+  "job-list":{
+    "list": "Job List"
+  },
+  "filter": {
+    "filter": "Filter By Category."
+  },
+  "add": {
+    "job": "Add Job"
+  },
+  "message": {
+    "success": "Update Success",
+    "add-success": "Add Success",
+    "delete-success": "Delete Success"
+  },
+  "detail": {
+    "update-job": "Update Job",
+    "description": "Description",
+    "name": "Name",
+    "remove-image": "Remove Image"
+  }
+}
