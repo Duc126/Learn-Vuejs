@@ -1,9 +1,13 @@
 {
   "job-list":{
-    "list": "Job List"
+    "list": "Job List",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "save": "Save"
   },
   "filter": {
-    "filter": "Filter By Category."
+    "filter": "Filter By Category"
   },
   "add": {
     "job": "Add Job"
@@ -17,6 +21,7 @@
     "update-job": "Update Job",
     "description": "Description",
     "name": "Name",
-    "remove-image": "Remove Image"
+    "remove-image": "Remove Image",
+    "category": "Category"
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select v-model="$i18n.locale">
+    <select class="form-select form-select-md mb-3" aria-label=".form-select-md example" v-model="$i18n.locale">
       <option
         v-for="(lang, i) in langs"
         :key="`lang-${i}`"

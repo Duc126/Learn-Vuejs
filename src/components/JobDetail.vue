@@ -2,8 +2,14 @@
   <div class="container my-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-6 w-50" style=" height: 250px;">
-        <img :src="require(`@/assets/img/${job.img_job}`)" :alt="job.name_job" width="250" height="200" class="img-fluid">
-      </div>
+        <!-- <img :src="require(`@/assets/img/${job.img_job}`)" :alt="job.name_job" width="250" height="200" class="img-fluid"> -->
+        <img
+            :src="job.img_job ? require(`@/assets/img/${job.img_job}`) : ''"
+            :alt="job.name_job"
+            width="250"
+            height="200"
+            style="display: block; margin: auto;">
+          </div>
       <div class="col-md-6">
         <div v-if="successMessage" class="alert alert-success">
           {{ successMessage }}

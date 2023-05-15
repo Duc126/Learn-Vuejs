@@ -11,11 +11,17 @@ import VueI18n from 'vue-i18n/dist/vue-i18n.common.js'
 import vnMessage from '@/lang/vn.json'
 import enMessage from '@/lang/en.json'
 import VeeValidate from 'vee-validate'
+import Toast from '@/components/notification.vue'
+
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Vue.component('job-item', JobItem)
 Vue.use(VueI18n)
 Vue.use(VeeValidate)
+Vue.component('Toast', Toast)
+// Vue.component('font-awesome-icon', FontAwesomeIcon)
+import 'font-awesome/css/font-awesome.min.css'
 
 const messages = {
   vn: vnMessage,

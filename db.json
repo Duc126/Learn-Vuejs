@@ -25,10 +25,46 @@
       "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
       "link_detail_job": "job_detail_3.html",
       "category": "Designer",
-      "email": "a"
+      "email": "a@gmail.com"
     },
     {
       "id": 4,
+      "img_job": "pic4.png",
+      "name_job": "PHP Dev",
+      "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+      "link_detail_job": "job_detail_3.html",
+      "category": "Designer",
+      "email": "pic4@email.com"
+    },
+    {
+      "id": 5,
+      "img_job": "pic4.png",
+      "name_job": "PHP Dev",
+      "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+      "link_detail_job": "job_detail_3.html",
+      "category": "Designer",
+      "email": "pic4@email.com"
+    },
+    {
+      "id": 6,
+      "img_job": "pic4.png",
+      "name_job": "PHP Dev",
+      "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+      "link_detail_job": "job_detail_3.html",
+      "category": "Designer",
+      "email": "pic4@email.com"
+    },
+    {
+      "id": 7,
+      "img_job": "pic4.png",
+      "name_job": "PHP Dev",
+      "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
+      "link_detail_job": "job_detail_3.html",
+      "category": "Designer",
+      "email": "pic4@email.com"
+    },
+    {
+      "id": 8,
       "img_job": "pic4.png",
       "name_job": "PHP Dev",
       "sum_job": "Tham gia vào tất cả các giai đoạn của quy trình phát triển ứng dụng PHP bao gồm giai đoạn Thiết kế, Phân tích, Phát triển và Bảo trì.",
