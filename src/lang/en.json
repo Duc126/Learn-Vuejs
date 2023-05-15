@@ -23,5 +23,9 @@
     "name": "Name",
     "remove-image": "Remove Image",
     "category": "Category"
+  },
+  "excel": {
+    "export_excel": "Export Excel",
+    "export_csv": "Export CSV"
   }
 }

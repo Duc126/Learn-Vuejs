@@ -12,7 +12,8 @@ import vnMessage from '@/lang/vn.json'
 import enMessage from '@/lang/en.json'
 import VeeValidate from 'vee-validate'
 import Toast from '@/components/notification.vue'
-
+import * as XLSX from 'xlsx'
+import { saveAs } from 'file-saver'
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -22,7 +23,9 @@ Vue.use(VeeValidate)
 Vue.component('Toast', Toast)
 // Vue.component('font-awesome-icon', FontAwesomeIcon)
 import 'font-awesome/css/font-awesome.min.css'
-
+Vue.config.productionTip = false
+Vue.prototype.$XLSX = XLSX
+Vue.prototype.$saveAs = saveAs
 const messages = {
   vn: vnMessage,
   en: enMessage

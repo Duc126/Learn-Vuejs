@@ -25,5 +25,11 @@
     "name": "Tên",
     "remove-image": "Xóa Ảnh",
     "category": "Danh Mục"
+  },
+  "excel": {
+    "export_excel": "Xuất Excel",
+    "export_csv": "Xuất CSV"
+
+
   }
 }

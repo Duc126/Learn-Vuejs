@@ -35,7 +35,17 @@
           </b-button>
         </div>
       </div>
+      <div class="mb-3" style="margin-left: 72%;">
+          <button class="btn btn-success" @click="exportExcel">
+           <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+            {{ $t("excel.export_excel") }}
+          </button>
+          <button class="btn btn-warning" @click="exportCSV">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            {{ $t("excel.export_csv") }}
 
+          </button>
+      </div>
       <div>
         <div>
           <b-modal id="modal-add-job" title="Add Job" hide-footer>
@@ -101,7 +111,6 @@
           </b-modal>
         </div>
       </div>
-      <div></div>
     </div>
     <div class="d-flex flex-wrap">
       <div
@@ -172,7 +181,8 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Toast from './notification.vue'
-
+import * as XLSX from 'xlsx'
+import { saveAs } from 'file-saver'
 import { addJob, deleteJob } from '@/services/JobService.js'
 export default {
   computed: {
@@ -191,13 +201,14 @@ export default {
     },
     categories () {
       if (this.jobs.length > 0) {
-        return this.jobs.map(job => job.category)
+        const uniqueCategories = this.jobs
+          .map(job => job.category)
           .filter((category, index, self) => self.indexOf(category) === index)
+        return uniqueCategories
       } else {
         return []
       }
     }
-
   },
 
   created () {
@@ -251,6 +262,44 @@ export default {
           }
         })
     },
+    exportExcel () {
+      const filteredData = this.filteredJobs.map(job => {
+        const filteredJob = {}
+        this.columnsToDisplay.forEach(column => {
+          filteredJob[column] = job[column]
+        })
+        return filteredJob
+      })
+
+      const workbook = XLSX.utils.book_new()
+      const worksheet = XLSX.utils.json_to_sheet(filteredData)
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet 1')
+
+      const fileBuffer = XLSX.write(workbook, { type: 'array', bookType: 'xlsx' })
+      const file = new Blob([fileBuffer], { type: 'application/octet-stream' })
+      const fileName = this.$t('job-list.list') + '.xlsx'
+
+      saveAs(file, fileName)
+    },
+    exportCSV () {
+      const filteredData = this.filteredJobs.map(job => {
+        const filteredJob = {}
+        this.columnsToDisplay.forEach(column => {
+          filteredJob[column] = job[column]
+        })
+        return filteredJob
+      })
+
+      const workbook = XLSX.utils.book_new()
+      const worksheet = XLSX.utils.json_to_sheet(filteredData)
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet 1')
+
+      const fileBuffer = XLSX.write(workbook, { type: 'array', bookType: 'csv' })
+      const file = new Blob([fileBuffer], { type: 'application/octet-stream' })
+      const fileName = this.$t('job-list.list') + '.csv'
+
+      saveAs(file, fileName)
+    },
 
     onCloseModal () {
       this.$bvModal.hide('modal-add-job')
@@ -289,12 +338,13 @@ export default {
     return {
       newJob: {
         id: '',
-        email: '',
+        img_job: '',
         name_job: '',
+        email: '',
         sum_job: '',
-        category: '',
-        img_job: ''
+        category: ''
       },
+      columnsToDisplay: ['name_job', 'email', 'category'],
       successMessage: '',
       errorMessage: null
     }
