@@ -1,24 +1,35 @@
-.job-item{
+.job-item {
   position: relative;
   width: 270px;
   background-color: #ffffff;
   border: 1px solid #DCDCDD;
   margin: 0 10px 30px;
   overflow: hidden;
+  border-radius: 8%;
 }
+
 .job-description {
   font-size: 13px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
-  border-bottom: 1px solid #DCDCDD;
+  /* white-space: nowrap */
 }
+
 .jobID {
   position: absolute;
   top: 0;
   left: 0;
   color: #6c757d;
   padding: 5px;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+ul.dropdown-menu.dropdown-menu-right.show {
+  --bs-dropdown-min-width: 0px;
+  transform: translate3d(-61px, 38px, 0px);
 }

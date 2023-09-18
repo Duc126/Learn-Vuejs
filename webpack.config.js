@@ -15,8 +15,18 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules\/json2csv/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
       // ...
     ]
-  }
+  },
   // ...
-}
+};

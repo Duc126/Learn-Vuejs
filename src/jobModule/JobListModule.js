@@ -7,6 +7,7 @@ export const state = {
 }
 
 export const getters = {
+  jobs: state => state.jobs,
   filteredJobs: state => {
     if (state.selectedCategories.length === 0) {
       return state.jobs

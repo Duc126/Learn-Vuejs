@@ -1,0 +1,35 @@
+{
+  "job-list":{
+    "list": "Danh Sách",
+    "delete": "Xóa",
+    "edit": "Chỉnh Sửa",
+    "close": "Đóng",
+    "save": "Lưu"
+  },
+  "filter": {
+    "filter": "Danh Sách Việc Làm"
+  },
+  "add": {
+    "job": "Thêm Công Việc Mới"
+  },
+  "message": {
+    "success": "Cập Nhật Thành Công",
+    "add-success": "Thêm dữ liệu thành công",
+    "delete-success": "Xóa Job Thành Công"
+
+
+  },
+  "detail": {
+    "update-job": "Cập Nhật Job",
+    "description": "Mô Tả",
+    "name": "Tên",
+    "remove-image": "Xóa Ảnh",
+    "category": "Danh Mục"
+  },
+  "excel": {
+    "export_excel": "Xuất Excel",
+    "export_csv": "Xuất CSV"
+
+
+  }
+}

@@ -1,17 +1,39 @@
 <template>
   <div id="app">
-    <h1 class="text-center">Job List</h1>
+    <div class="d-flex align-items-center float-end" style="margin-right: 60px;">
+      <div class="ml-auto">
+        <ChangeLanguage />
+      </div>
+    </div>
+      <h1 class="text-center">{{ $t('job-list.list')}}</h1>
+      <Toast :show="showSuccessToast" :message="successMessage" @hide="hideSuccessToast" />
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import ChangeLanguage from '@/components/Language.vue'
 import JobList from './components/JobList.vue'
+import Toast from '@/components/notification.vue'
 
 export default {
   name: 'App',
   components: {
-    JobList
+    ChangeLanguage,
+    JobList,
+    Toast
+  },
+  data () {
+    return {
+      showSuccessToast: false,
+      successMessage: ''
+    }
+  },
+  methods: {
+    hideSuccessToast () {
+      this.showSuccessToast = false
+    }
   }
 }
 </script>
@@ -22,6 +44,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 </style>
